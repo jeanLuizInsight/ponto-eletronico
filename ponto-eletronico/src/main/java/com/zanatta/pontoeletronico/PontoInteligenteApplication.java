@@ -1,13 +1,13 @@
-package com.jeanluizinsight.pontoeletronico;
+package com.zanatta.pontoeletronico;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PontoEletronicoApplication {
+public class PontoInteligenteApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PontoEletronicoApplication.class, args);
+		SpringApplication.run(PontoInteligenteApplication.class, args);
 	}
 
 }
