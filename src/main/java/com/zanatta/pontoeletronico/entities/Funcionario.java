@@ -16,6 +16,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 
 import com.zanatta.pontoeletronico.enums.PerfilEnum;
@@ -158,5 +160,24 @@ public class Funcionario implements Serializable {
 	public void setLancamentos(List<Lancamento> lancamentos) {
 		this.lancamentos = lancamentos;
 	}
+	
+	@PrePersist
+	public void prePersist() {
+		Date data = new Date();
+		this.dataCriacao = data;
+		this.dataAtualizacao = data;
+	}
+
+	@PreUpdate
+	public void preUpdate() {
+		this.dataAtualizacao = new Date();
+	}
+
+	@Override
+	public String toString() {
+		return "Funcionario [id=" + id + ", nome=" + nome + ", cpf=" + cpf + ", empresa=" + empresa + "]";
+	}
+	
+	
 
 }
