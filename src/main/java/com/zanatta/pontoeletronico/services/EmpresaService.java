@@ -14,7 +14,7 @@ public class EmpresaService {
 
 	private static final Logger LOG = LoggerFactory.getLogger(EmpresaService.class);
 
-	@Autowired EmpresaRepository empresaRepository;
+	@Autowired private EmpresaRepository empresaRepository;
 
 	/**
 	 * Retorna uma empresa filtrando pelo CNPJ.
