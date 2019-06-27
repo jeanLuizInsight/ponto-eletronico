@@ -62,6 +62,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<!-- Suporte a recursos do java 8 no jackson (JSON) -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-jdk8</artifactId>
+		</dependency>
 		<!-- JPA, MySQL e H2 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
