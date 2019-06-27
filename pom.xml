@@ -20,6 +20,27 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 	</properties>
+	
+	<profiles>
+		<profile>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<id>desenvolvimento</id>
+			<properties>
+				<profile-active>desenvolvimento</profile-active>
+			</properties>
+		</profile>
+		<profile>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<id>producao</id>
+			<properties>
+				<profile-active>producao</profile-active>
+			</properties>
+		</profile>
+	</profiles>
 
 	<dependencies>
 		<dependency>
