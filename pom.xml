@@ -20,6 +20,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<commons-lang3.version>3.6</commons-lang3.version>
+		<jjwt.version>0.7.0</jjwt.version>
 	</properties>
 	
 	<profiles>
@@ -44,6 +45,7 @@
 	</profiles>
 
 	<dependencies>
+		<!-- Core`s -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
@@ -62,11 +64,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<!-- Suporte a recursos do java 8 no jackson (JSON) -->
-		<dependency>
-			<groupId>com.fasterxml.jackson.datatype</groupId>
-			<artifactId>jackson-datatype-jdk8</artifactId>
 		</dependency>
 		<!-- JPA, MySQL e H2 -->
 		<dependency>
@@ -101,11 +98,22 @@
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
 		</dependency>
+		<!-- Suporte a recursos do java 8 no jackson (JSON) -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-jdk8</artifactId>
+		</dependency>
 		<!-- manipulação de Enums -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>${commons-lang3.version}</version>
+		</dependency>
+		<!-- support JWT -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>${jjwt.version}</version>
 		</dependency>
 	</dependencies>
 
