@@ -27,7 +27,7 @@ import com.zanatta.pontoeletronico.utils.PasswordUtils;
 @CrossOrigin(origins = "*")
 public class FuncionarioController {
 
-	private static final Logger LOG = LoggerFactory.getLogger(EmpresaController.class);
+	private static final Logger LOG = LoggerFactory.getLogger(FuncionarioController.class);
 
 	@Autowired private FuncionarioService funcionarioService;
 
