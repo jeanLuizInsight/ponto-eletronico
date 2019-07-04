@@ -3,7 +3,6 @@ package com.zanatta.pontoeletronico.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import com.zanatta.pontoeletronico.security.utils.JwtTokenUtil;
@@ -23,7 +22,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @since 04/07/2019
  */
 @Configuration
-@Profile("producao")
+// @Profile("desenvolvimento")
 @EnableSwagger2
 public class SwaggerConfig {
 

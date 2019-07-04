@@ -42,15 +42,13 @@ ALTER TABLE `empresa`
 -- Indexes for table `funcionario`
 --
 ALTER TABLE `funcionario`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `FK4cm1kg523jlopyexjbmi6y54j` (`empresa_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `lancamento`
 --
 ALTER TABLE `lancamento`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `FK46i4k5vl8wah7feutye9kbpi4` (`funcionario_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for table `empresa`
@@ -75,10 +73,10 @@ ALTER TABLE `lancamento`
 -- Constraints for table `funcionario`
 --
 ALTER TABLE `funcionario`
-  ADD CONSTRAINT `FK4cm1kg523jlopyexjbmi6y54j` FOREIGN KEY (`empresa_id`) REFERENCES `empresa` (`id`);
+  ADD CONSTRAINT `FUNFK` FOREIGN KEY (`empresa_id`) REFERENCES `empresa` (`id`);
 
 --
 -- Constraints for table `lancamento`
 --
 ALTER TABLE `lancamento`
-  ADD CONSTRAINT `FK46i4k5vl8wah7feutye9kbpi4` FOREIGN KEY (`funcionario_id`) REFERENCES `funcionario` (`id`);
+  ADD CONSTRAINT `LANFK` FOREIGN KEY (`funcionario_id`) REFERENCES `funcionario` (`id`);

@@ -5,6 +5,8 @@ import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
@@ -20,9 +22,11 @@ public class LancamentoService {
 
 	/**
 	 * Registra um lançamento no banco de dados.
+	 * OBS.: cachePut: atualiza qualquer alteração do elemento que já está no cache
 	 * @param lancamento
 	 * @return
 	 */
+	@CachePut("lancamentoPorId")
 	public Lancamento persistir(Lancamento lancamento) {
 		String msg = MessageFormat.format("Persistindo lançamento {0}", lancamento);
 		LOG.info(msg);
@@ -34,6 +38,7 @@ public class LancamentoService {
 	 * @param id
 	 * @return
 	 */
+	@Cacheable("lancamentoPorId")
 	public Optional<Lancamento> buscarPorId(Long id) {
 		String msg = MessageFormat.format("Buscando um lançamento pelo ID {0}", id);
 		LOG.info(msg);
