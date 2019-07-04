@@ -65,7 +65,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				// links abertos...
 				.antMatchers("/auth/**",
 						"/api/cadastrar-pj",
-						"/api/cadastrar-pf")
+						"/api/cadastrar-pf",
+						// paths para utilização do swagger
+						"/v2/api-docs",
+						"/swagger-ui.html",
+						"/swagger-resources/**",
+						"/configuration/security",
+						"/webjars/**")
 				.permitAll()
 				.anyRequest()
 				.authenticated();
