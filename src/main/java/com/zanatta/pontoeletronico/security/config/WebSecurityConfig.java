@@ -32,8 +32,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	public void configureAuthentication(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
-		authenticationManagerBuilder.userDetailsService(this.userDetailsService)
-				.passwordEncoder(passwordEncoder());
+		authenticationManagerBuilder.userDetailsService(this.userDetailsService).passwordEncoder(passwordEncoder());
 	}
 
 	@Bean
@@ -63,14 +62,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 				.and()
 				.authorizeRequests()
+				// links abertos...
 				.antMatchers("/auth/**",
 						"/api/cadastrar-pj",
-						"/api/cadastrar-pf",
-						// "/v2/api-docs",
-						// "/swagger-resources/**",
-						"/configuration/security",
-						// "/swagger-ui.html",
-						"/webjars/**")
+						"/api/cadastrar-pf")
 				.permitAll()
 				.anyRequest()
 				.authenticated();
