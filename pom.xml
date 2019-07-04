@@ -19,7 +19,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<commons-lang3.version>3.6</commons-lang3.version>
+		<commonslang3.version>3.6</commonslang3.version>
 		<jjwt.version>0.7.0</jjwt.version>
 	</properties>
 	
@@ -107,7 +107,7 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>${commons-lang3.version}</version>
+			<version>${commonslang3.version}</version>
 		</dependency>
 		<!-- support JWT -->
 		<dependency>
