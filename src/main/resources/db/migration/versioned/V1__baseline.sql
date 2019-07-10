@@ -73,10 +73,10 @@ ALTER TABLE `lancamento`
 -- Constraints for table `funcionario`
 --
 ALTER TABLE `funcionario`
-  ADD CONSTRAINT `FUNFK` FOREIGN KEY (`empresa_id`) REFERENCES `empresa` (`id`);
+  ADD CONSTRAINT `FUNEMPFK` FOREIGN KEY (`empresa_id`) REFERENCES `empresa` (`id`);
 
 --
 -- Constraints for table `lancamento`
 --
 ALTER TABLE `lancamento`
-  ADD CONSTRAINT `LANFK` FOREIGN KEY (`funcionario_id`) REFERENCES `funcionario` (`id`);
+  ADD CONSTRAINT `LANFUNFK` FOREIGN KEY (`funcionario_id`) REFERENCES `funcionario` (`id`);
