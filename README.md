@@ -6,4 +6,7 @@ Tecnologias utilizadas:
 * Java 8;
 * Stack de Spring;
 * Flyway DB;
-* ...
+* JPA, MySQL e H2;
+* JWT;
+* Swagger;
+* EhCache;
