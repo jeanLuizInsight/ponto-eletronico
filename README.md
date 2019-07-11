@@ -10,3 +10,8 @@ Tecnologias utilizadas:
 * JWT;
 * Swagger;
 * EhCache;
+
+Boas práticas com:
+* Configuração por profile;
+* Testes automatizados;
+* Estruturação arquivos Flyway;
