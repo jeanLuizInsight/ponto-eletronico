@@ -10,6 +10,7 @@ Tecnologias utilizadas:
 * JWT;
 * Swagger;
 * EhCache;
+* Integração contínua com Travis CI;
 
 Boas práticas com:
 * Configuração por profile;
