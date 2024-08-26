@@ -21,7 +21,7 @@
 		<java.version>1.8</java.version>
 		<commonslang3.version>3.6</commonslang3.version>
 		<jjwt.version>0.7.0</jjwt.version>
-		<springfoxswagger.version>2.7.0</springfoxswagger.version>
+		<springfoxswagger.version>2.10.0</springfoxswagger.version>
 	</properties>
 	
 	<profiles>
